@@ -226,7 +226,7 @@ You need **two** things running simultaneously:
 
 **Terminal 1 — Backend server:**
 ```bash
-cd /d/Personal/Project/kodeye
+cd kodeye
 poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
@@ -236,7 +236,3 @@ code --extensionDevelopmentPath="D:\Personal\Project\kodeye\vscode-extension"
 ```
 
 **Browser:** Open `http://localhost:8000`
-
----
-
-*Kodeye v1.0 | BITS Pilani WILP M.Tech Dissertation 2024–2026*
