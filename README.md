@@ -123,7 +123,7 @@ The VS Code extension connects to your running Kodeye server and lets you right-
 Keep the server running in the first window. Open a second Git Bash and run:
 
 ```bash
-code --extensionDevelopmentPath="D:\Personal\Project\kodeye\vscode-extension"
+ code --extensionDevelopmentPath="E:\kodeye\vscode-extension"
 ```
 
 > ⚠️ Change the path to wherever you extracted kodeye.
