@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Environment — never include API keys
+.env
+
+# Git
+.git/
+.gitignore
+
+# VS Code extension — not needed in container
+vscode-extension/
+
+# ChromaDB local data
+chroma_db/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker itself
+Dockerfile
+.dockerignore
