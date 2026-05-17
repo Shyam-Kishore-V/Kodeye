@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Environment — NEVER commit API keys
+.env
+
+# Poetry
+poetry.lock
+
+# ChromaDB
+chroma_db/
+
+# VS Code local settings
+.vscode/settings.json
+
+# OS junk
+.DS_Store
+Thumbs.db

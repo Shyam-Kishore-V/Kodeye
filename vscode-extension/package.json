@@ -1,0 +1,35 @@
+{
+  "name": "kodeye",
+  "displayName": "Kodeye",
+  "version": "1.0.0",
+  "publisher": "kodeye",
+  "engines": { "vscode": "^1.74.0" },
+  "activationEvents": ["*"],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "kodeye.analyzeFile", "title": "Kodeye: Analyze Entire File" },
+      { "command": "kodeye.analyzeSelection", "title": "Kodeye: Analyze Selected Code" },
+      { "command": "kodeye.generateDocs", "title": "Kodeye: Generate Documentation" }
+    ],
+    "menus": {
+      "editor/context": [
+        { "command": "kodeye.analyzeFile",      "group": "navigation" },
+        { "command": "kodeye.analyzeSelection", "group": "navigation" },
+        { "command": "kodeye.generateDocs",     "group": "navigation" }
+      ]
+    },
+    "keybindings": [
+      { "command": "kodeye.analyzeFile",      "key": "ctrl+shift+k" },
+      { "command": "kodeye.analyzeSelection", "key": "ctrl+shift+a" }
+    ],
+    "configuration": {
+      "title": "Kodeye",
+      "properties": {
+        "kodeye.backendUrl": { "type": "string", "default": "http://localhost:8000" },
+        "kodeye.provider":   { "type": "string", "default": "groq" },
+        "kodeye.model":      { "type": "string", "default": "llama-3.3-70b-versatile" }
+      }
+    }
+  }
+}
