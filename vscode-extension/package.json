@@ -1,16 +1,30 @@
 {
   "name": "kodeye",
-  "displayName": "Kodeye",
+  "displayName": "Kodeye — Intelligent Code Analysis",
+  "description": "AI-powered code review, security scanning, static analysis and documentation generation for Python, JavaScript and HTML.",
   "version": "1.0.0",
-  "publisher": "kodeye",
+  "publisher": "KodeyeAI",
+  "license": "MIT",
+  "icon": "icon.png",
+  "homepage": "https://kodeye.onrender.com",
+  "galleryBanner": {
+    "color": "#1e2327",
+    "theme": "dark"
+  },
   "engines": { "vscode": "^1.74.0" },
   "activationEvents": ["*"],
   "main": "./src/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theonlyvsk/Kodeye"
+  },
+  "categories": ["Linters", "Other"],
+  "keywords": ["code review", "AI", "security", "documentation", "python"],
   "contributes": {
     "commands": [
-      { "command": "kodeye.analyzeFile", "title": "Kodeye: Analyze Entire File" },
+      { "command": "kodeye.analyzeFile",      "title": "Kodeye: Analyze Entire File" },
       { "command": "kodeye.analyzeSelection", "title": "Kodeye: Analyze Selected Code" },
-      { "command": "kodeye.generateDocs", "title": "Kodeye: Generate Documentation" }
+      { "command": "kodeye.generateDocs",     "title": "Kodeye: Generate Documentation" }
     ],
     "menus": {
       "editor/context": [
@@ -26,9 +40,21 @@
     "configuration": {
       "title": "Kodeye",
       "properties": {
-        "kodeye.backendUrl": { "type": "string", "default": "http://localhost:8000" },
-        "kodeye.provider":   { "type": "string", "default": "groq" },
-        "kodeye.model":      { "type": "string", "default": "llama-3.3-70b-versatile" }
+        "kodeye.backendUrl": {
+          "type": "string",
+          "default": "https://kodeye.onrender.com",
+          "description": "Kodeye backend server URL"
+        },
+        "kodeye.provider": {
+          "type": "string",
+          "default": "groq",
+          "description": "LLM provider"
+        },
+        "kodeye.model": {
+          "type": "string",
+          "default": "llama-3.3-70b-versatile",
+          "description": "Model ID"
+        }
       }
     }
   }
